@@ -1,0 +1,25 @@
+---
+- name: Instalar/atualizar pacotes adicionais
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+  - name: Atualizar repositórios
+    ansible.builtin.apt:
+      update_cache: yes
+      cache_valid_time: 3600
+
+  - name: Instalar pacotes
+    ansible.builtin.apt:
+      name:
+        - default-jdk
+        - htop
+        - nscd
+        - neovim
+        - tmux
+        - xterm
+      state: latest
+
+  - name: Instalar Google Chrome
+    ansible.builtin.apt:
+      deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  become: yes
+
+  import_tasks: rede.yml
+  import_tasks: cliente_nfs.yml
+  import_tasks: cliente_nis.yml
+  import_tasks: pacotes.yml
+  import_tasks: lightdm.yml
