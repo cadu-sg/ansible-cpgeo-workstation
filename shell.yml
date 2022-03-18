@@ -26,6 +26,7 @@
       url: https://git.io/antigen
       dest: "{{ home }}/antigen.zsh"
       owner: "{{ user }}"
+      group: "{{ user }}"
       mode: '644'
 
   - name: Copiar arquivo de configuração do zsh
@@ -33,6 +34,7 @@
       src: files/zshrc
       dest: "{{ home }}/.zshrc"
       owner: "{{ user }}"
+      group: "{{ user }}"
       mode: '644'
 
   - name: Alterar o shell do usuário
