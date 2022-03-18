@@ -16,6 +16,7 @@
         - htop
         - nscd
         - neovim
+        - ssh
         - tmux
         - xterm
       state: latest
