@@ -23,7 +23,7 @@
 
   - name: Instalar antigen
     ansible.builtin.get_url:
-      url: git.io/antigen
+      url: https://git.io/antigen
       dest: "{{ home }}/antigen.zsh"
 
   - name: Copiar arquivo de configuração do zsh
