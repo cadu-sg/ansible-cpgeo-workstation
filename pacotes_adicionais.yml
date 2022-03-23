@@ -16,6 +16,8 @@
         - htop
         - nscd
         - neovim
+        - openssh-client
+        - openssh-server
         - ssh
         - tmux
         - xterm
