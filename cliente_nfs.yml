@@ -45,15 +45,18 @@
       src: /dados/ftp
       dest: /ftp
       state: link
+      force: yes
 
   - name: Criar link simbólico /nis apontando para /dados/nis
     ansible.builtin.file:
       src: /dados/nis
       dest: /nis
       state: link
-
+      force: yes
+      
   - name: Criar link simbólico /seismic apontando para /dados/seismic
     ansible.builtin.file:
       src: /dados/nis/seismic
       dest: /seismic
       state: link
+      force: yes
