@@ -14,49 +14,41 @@
     ansible.builtin.systemd:
       name: network-manager
       enabled: no
-      ignore_errors: yes
+    ignore_errors: yes
   - name: Desativar NetworkManager-dispatcher
     ansible.builtin.systemd:
       name: NetworkManager-dispatcher
       enabled: no
-      ignore_errors: yes
   - name: Desativar NetworkManager-wait-online
     ansible.builtin.systemd:
       name: NetworkManager-wait-online
       enabled: no
-      ignore_errors: yes
   - name: Desativar NetworkManager
     ansible.builtin.systemd:
       name: NetworkManager
       enabled: no
-      ignore_errors: yes
 
   - name: Desativar networkd-dispatcher
     ansible.builtin.systemd:
       name: networkd-dispatcher
       enabled: no
-      ignore_errors: yes
   - name: Desativar systemd-networkd-wait-online
     ansible.builtin.systemd:
       name: systemd-networkd-wait-online
       enabled: no
-      ignore_errors: yes
   - name: Desativar systemd-networkd
     ansible.builtin.systemd:
       name: systemd-networkd
       enabled: no
-      ignore_errors: yes
   - name: Desativar systemd-networkd.socket
     ansible.builtin.systemd:
       name: systemd-networkd.socket
       enabled: no
-      ignore_errors: yes
 
   - name: Desativar systemd-resolved
     ansible.builtin.systemd:
       name: systemd-resolved
       enabled: no
-      ignore_errors: yes
 
   - name: Copiar arquivo de configuração /etc/resolv.conf
     ansible.builtin.copy:
