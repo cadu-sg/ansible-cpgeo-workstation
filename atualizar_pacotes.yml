@@ -3,7 +3,7 @@
   connection: local
   become: yes
   tasks:
-  - name: Atualizar repositórios
+  - name: Atualizar lista de pacotes (apt-get update)
     ansible.builtin.apt:
       update_cache: yes
       cache_valid_time: 3600
