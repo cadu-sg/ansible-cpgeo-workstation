@@ -16,6 +16,7 @@
     ansible.builtin.apt:
       name:
         - build-essential
+        - gedit
         - gnumeric
         - htop
         - nscd
